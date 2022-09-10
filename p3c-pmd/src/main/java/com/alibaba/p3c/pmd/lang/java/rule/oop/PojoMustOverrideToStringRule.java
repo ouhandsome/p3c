@@ -37,8 +37,8 @@ import org.jaxen.JaxenException;
 public class PojoMustOverrideToStringRule extends AbstractPojoRule {
 
     private static final String XPATH = "ClassOrInterfaceBody/ClassOrInterfaceBodyDeclaration/MethodDeclaration"
-        + "[@Public='true' and MethodDeclarator[@Image='toString'] and "
-        + "MethodDeclarator[@Image='toString' and @ParameterCount='0']]";
+        + "[@Public='true' and MethodDeclaration[@Name='toString'] and "
+        + "MethodDeclaration[@Name='toString' and @ParameterCount='0']]";
 
     private static final String TOSTRING_XPATH = "//PrimaryExpression[PrimaryPrefix[Name"
         + "[(ends-with(@Image, '.toString'))]]["
